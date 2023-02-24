@@ -1,0 +1,147 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.players {
+  border: 2px solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  font-size: 18px;
+  margin-top: 50px;
+}
+.players div {
+  padding: 15px 25px;
+  border: 2px solid white;
+  border-radius: 15px;
+}
+
+.players div.active {
+  background-color: blue;
+  color: white;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  margin-top: 50px;
+}
+
+.cell {
+  height: 100px;
+  width: 100px;
+  border: 2px solid #392f5a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 75px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.game-board :nth-child(1),
+.game-board :nth-child(2),
+.game-board :nth-child(3) {
+  border-top: none;
+}
+
+.game-board :nth-child(3n) {
+  border-right: none;
+}
+
+.game-board :nth-child(3n + 1) {
+  border-left: none;
+}
+
+.game-board :nth-child(7),
+.game-board :nth-child(8),
+.game-board :nth-child(9) {
+  border-bottom: none;
+}
+
+.result {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.54);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+button {
+  background-color: rgb(253, 253, 255);
+  border-radius: 5px;
+  border: white solid blue;
+  padding: 15px 40px;
+  font-size: 20px;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  background-color: #fff8f0;
+}
+
+.O {
+  color: #ff8811;
+}
+
+.X {
+  color: #9dd9d2;
+}
+
+.register {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.864);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.register div{
+ padding: 5px;
+}
+
+.register span{
+  padding: 5px;
+ }
+ .register input{
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.273);
+  border: none;
+  color: white;
+ }
+ 
+ #startButton {
+  background-color: rgb(255, 254, 253);
+  border-radius: 5px;
+  border: white solid blue;
+  padding: 5px 20px;
+  font-size: 20px;
+  margin-top: 20px;
+  color: rgb(68, 68, 68);
+}
+
+.inactive {
+  display: none;
+}
